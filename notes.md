@@ -102,3 +102,49 @@ console.log(farhenheit); // answer 104
 ```
 
 <hr>
+
+### Conditionals
+
+- The **_if_** statement represents a test.
+- A **_condition_** is an expression that evaluates as a value either true or false: it’s called a **_boolean_** value.
+- If the condition is true, then execute the instructions contained in the code block.
+
+```javascript
+if (true) {
+  // The condition for this if is always true
+  // This block of code will always be executed
+}
+if (false) {
+  // The condition for this if is always false
+  // This block of code will never be executed
+}
+```
+
+- You’ll often want to have your code execute one way when something’s true and another way when something’s false.
+
+```javascript
+if (condition) {
+  // Code to run when the condition is true
+} else {
+  // Code to run when the condition is false
+}
+```
+
+- The execution flow for the previous program can be expressed graphically using a **flow diagram**.
+  [flow diagram](./images/flow-diagram.PNG)
+
+- The **&&** operator (“logical and”) can apply to both types of boolean values. true will only be the result of the statement if both conditions are true.
+- The **||** operator (“logical or”) makes statements true if at least one of the statements is true.
+- There’s another operator for when you know what you don’t want: the not operator! You’ll use a **!** for this.
+
+#### Operator Meaning
+
+- === Equal
+- !== Not Equal to
+- < Less than
+- <= Less than or equal to
+- \> Greater than
+- \>= Greater than or equal to
+- && Logical and
+- || Logical Or
+- ! Logical not
