@@ -30,6 +30,7 @@
 - A variable is an information storage area.
 - It has three properties, it's name, it's value and it's type.
 - Declaring a variable means the computer reserves memory in which to store the variable.
+- Naming variables is an important for code readability.
 - Assign a value to a varible with the = (assignment operator) operator.
 - **_const_** - is a variable declaration that you can’t reassign within the context of the block. That doesn’t mean it’s immutable. For example, array values can be changed.
 - **_let_** - is similar to var because it can be reassigned, but unlike var, which is lexically scoped, let is block scoped.
@@ -41,11 +42,63 @@
 - The scope of a variable is the part of the program where the variable is visible and usable. Variables declared with **let** or **const** are block-scoped: their visibility is limited to the block where they are declared (and every sub-block, if any).
 
 ```JAVASCRIPT
-let num1 = 0;
-{
-  num1 = 1; // OK : num1 is declared in the parent block
-  const num2 = 0;
-}
-console.log(num1); // OK : num1 is declared in the current block
-console.log(num2); // Error! num2 is not visible here
+  let num1 = 0;
+  {
+    num1 = 1; // OK : num1 is declared in the parent block
+    const num2 = 0;
+  }
+  console.log(num1); // OK : num1 is declared in the current block
+  console.log(num2); // Error! num2 is not visible here
 ```
+
+<hr>
+
+### Type Conversions
+
+- **_Implicit_** conversions happen automatically.
+
+```javascript
+const f = 100;
+// Show "Variable f contains the value 100"
+console.log("Variable f contains the value " + f);
+```
+
+- **_Explicit_** conversions happen when you want to convert the value of another type.
+
+```javascript
+const h = "5";
+console.log(h + 1); // Concatenation: show the string "51"
+const i = Number("5");
+console.log(i + 1); // Numerical addition: show the number 6
+```
+
+<hr>
+
+### Doing basic math
+
+```javascript
+const rawPrice = 20;
+// tax rate = 7.85%
+// divide the tax rate percentage by 100 to get a decimal (0.0785)
+const taxRate = 7.85 / 100;
+// First add 1 to the tax rate (1.0785)
+// If you don't do that - you will just get the result of how much tax is added
+// We want the total
+// So you have to add 1 to the taxRate (1.0785)
+// This will give us the result of the taxRate + the rawPrice
+const finalPrice = rawPrice * (1 + taxRate);
+// Without adding the one - the result is 1.57
+// With the 1 - the final price is 21.57
+console.log(finalPrice);
+```
+
+```javascript
+// convert celsius to farhenheit
+const celsius = 40;
+// The conversion between scales is given by the formula: [°F] = ([°C] x 9/5) + 32.
+const farhenheit = (celsius * 9) / 5 + 32;
+
+console.log(farhenheit); // answer 104
+```
+
+<hr>
