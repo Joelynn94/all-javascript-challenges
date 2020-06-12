@@ -148,3 +148,19 @@ if (condition) {
 - && Logical and
 - || Logical Or
 - ! Logical not
+
+### Looping
+
+```javascript
+// While loop
+let i = 1;
+while (i <= 10) {
+  console.log(`Turn number: ${i}`);
+  i++;
+}
+
+// For loop
+for (let i = 1; i <= 10; i++) {
+  console.log(`Turn Number ${i}`);
+}
+```
